@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="result" placeholder="0">
+        
+            <button id ="clear" onclick="clr()">C</button>
+            <button id="button" onclick="display ('1')">1</button>
+            <button id="button" onclick="display('2')">2</button>
+            <button id="button" onclick="display('3')">3</button>
+            <button id="button" onclick="display('4')">4</button>
+
+            <button id="button" onclick="display('5')">5</button>
+            <button id="button" onclick="display('6')">6</button>
+            <button  id="button"onclick="display('7')">7</button>
+            <button  id="button"onclick="display('8')">8</button>
+
+            <button id="button" onclick="display('9')">9</button>
+            <button id="button" onclick="display('+')">+</button>
+            <button id="button" onclick="display('-')">-</button>
+            <button id="button" onclick="display('*')">*</button>
+
+            <button  id="button"onclick="display('/')">/</button>
+            <button id="button" onclick="equate()">=</button>
+            <button id="button" onclick="display('.')">.</button>
+
+        </div>
+    
+    
+    </div>
+    <script>
+        function clr() {
+            document.getElementById("result").value = ""
+
+        }
+        function display(val) {
+            document.getElementById("result").value += val;
+
+        }
+        function equate() {
+            let x = document.getElementById("result").value;
+            let y = eval(x);
+            document.getElementById("result").value = y;
+
+        }
+    </script>
+</body>
+
+</html>
